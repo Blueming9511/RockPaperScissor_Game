@@ -45,13 +45,62 @@ function playRound(playerSelection, computerChoice) {
     }
 }
 
-const gameButtons = document.querySelectorAll(".game-button")
 
-gameButtons.forEach(button => {
-    button.addEventListener("click", function (){
-        const userChoice = button.getAttribute('data-choice');
-        const computerChoice = getComputerChoice();
-        const result = playRound(userChoice, computerChoice);
-        alert(result);
-    });
-});
+//Consoler processing
+
+//get the user content
+function choiceProcessing(event) {
+    // Access the button directly from the event object
+    const button = event.currentTarget;
+    let Userchoice = button.getAttribute('data-choice');
+    let CompChoice = getComputerChoice();
+    let res = playRound(Userchoice, CompChoice)
+    document.getElementById("ComputerChoice").innerHTML = CompChoice;
+    document.getElementById("YoureChoice").innerHTML = Userchoice;
+    document.getElementById("res").innerHTML = res;
+    let currentscore = document.getElementById("score");
+    let score = currentscore.textContent.split(" - ");
+    let userScore = parseInt(score[0]);
+    let compScore = parseInt(score[1]);
+    if(res == "win"){
+        userScore++;
+    }else if(res == "lose"){
+        compScore++
+    }
+    else{
+        userScore++;
+        compScore++;
+    }
+    let newScore = `${userScore} - ${compScore}`;
+
+    let roundElement = document.getElementById("round");
+    let round = parseInt(roundElement.textContent); // Get the text content, not innerHTML
+    round++;
+    if(round <= 10){
+    
+    document.getElementById("score").innerHTML = newScore;
+    
+    roundElement.textContent = round;   
+    }
+    else if(round > 10){
+        if(userScore > compScore){
+            alert('Game Over! You won!');
+        }
+        else{
+            alert('Game Over! You lose!')
+        }
+    }
+    
+
+  }
+  
+  const gameButtons = document.querySelectorAll(".game-button");
+  gameButtons.forEach(button => {
+    button.addEventListener("click", choiceProcessing); // Pass the function directly
+  });
+
+
+
+
+
+

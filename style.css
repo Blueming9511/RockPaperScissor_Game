@@ -1,0 +1,64 @@
+
+body{
+    background-image: url(img/1.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+    height: 100vh; /* Ensure full-screen height */
+    margin: 0; /* Remove default body margins */
+
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border-width: 5px;
+    border: black ;
+
+    position: relative;
+    top: 7.5em;
+}
+
+.consoler{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.UserChoices{
+    /* border: 1px solid rgb(0, 0, 0); */
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+
+
+.game-button{
+   border-style: none;
+   background-color: transparent;
+}
+
+
+.right .left {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+
+
+.img-choice {
+    width: 50%;  /* Adjust as needed for desired size */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  button:hover {
+    transform: scale(1.1); /* Increase size by 10% */
+  }

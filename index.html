@@ -7,12 +7,47 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>  
-    <button class="game-button" data-choice="rock">Rock</button>
-    <button class="game-button" data-choice="paper">Paper</button>
-    <button class="game-button" data-choice="scissors">Scissors</button>
 
-    <script src="game.js">
   
-    </script>
+
+
+
+    <div class="container" >  
+      
+        <div class="UserChoices">
+            <button class="game-button" data-choice="rock">
+                <img src="img/rock_icon.png" alt="rock" class="img-choice">
+              </button>
+              <button class="game-button" data-choice="paper">
+                <img src="img/paper_icon.png" alt="paper" class="img-choice">
+              </button>
+              <button class="game-button" data-choice="scissors">
+                <img src="img/scissiors_icon.png" alt="scissors" class="img-choice">
+              </button>
+        </div>
+        <div class="consoler">
+            <div class="left">
+                <H1>ROUND: </H1> 
+                <H1>Your choice: </H1> 
+                <H1>Computer choice: </H1> 
+                <H1>Result: </H1>
+                <H1>SCORE: </H1>
+                
+            </div>
+
+            <div class="right">
+                <H1 id="round">0</H1>
+                <H1 id="YoureChoice">Haven't chosen yet</H1>
+                <H1 id="ComputerChoice">Haven't chosen yet</H1>
+                <H1 id="res">None</H1>
+
+                <H1 id="score">0 - 0</H1>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <script src="game.js"></script>
 </body>
 </html>
