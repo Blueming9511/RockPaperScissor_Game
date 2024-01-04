@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+      </style>
     <title>Rock Paper Scissors</title>
 </head>
-<body>  
 
-  
-
+<body>
 
 
-    <div class="container" >  
-      
+
+
+
+    <div class="container">
+
         <div class="UserChoices">
             <button class="game-button" data-choice="rock">
                 <img src="img/rock_icon.png" alt="rock" class="img-choice">
-              </button>
-              <button class="game-button" data-choice="paper">
+            </button>
+            <button class="game-button" data-choice="paper">
                 <img src="img/paper_icon.png" alt="paper" class="img-choice">
-              </button>
-              <button class="game-button" data-choice="scissors">
+            </button>
+            <button class="game-button" data-choice="scissors">
                 <img src="img/scissiors_icon.png" alt="scissors" class="img-choice">
-              </button>
+            </button>
         </div>
         <div class="consoler">
-            <div class="left">
-                <H1>ROUND: </H1> 
-                <H1>Your choice: </H1> 
-                <H1>Computer choice: </H1> 
-                <H1>Result: </H1>
-                <H1>SCORE: </H1>
+            <div class="ROUNDING">
+                <div class="LEFT"><H1>ROUND </H1></div>
+                <div class="RIGHT"><H1 id="round">0</H1></div>
+            </div>
+            <div class="consoler-body">
+                <div class="left">
                 
+                    <H1>Your choice: </H1>
+                    <H1>Computer choice: </H1>
+                    <H1>Result: </H1>
+                    <H1>SCORE: </H1>
+    
+                </div>
+    
+                <div class="right">
+                    
+                    <H1 id="YoureChoice">Haven't chosen yet</H1>
+                    <H1 id="ComputerChoice">Haven't chosen yet</H1>
+                    <H1 id="res">None</H1>
+    
+                    <H1 id="score">0 - 0</H1>
+                </div>
             </div>
+           
 
-            <div class="right">
-                <H1 id="round">0</H1>
-                <H1 id="YoureChoice">Haven't chosen yet</H1>
-                <H1 id="ComputerChoice">Haven't chosen yet</H1>
-                <H1 id="res">None</H1>
-
-                <H1 id="score">0 - 0</H1>
-            </div>
-            
 
         </div>
     </div>
 
+
+
+    <!-- Win popup window -->
+    <!-- <div class="popup-window">
+        <div class="popup-win" onclick="closeWin()">
+            <img src="img/win.png" alt="win">
+            <button>Close</button>
+
+        </div>
+        <div class="popup-lose" onclick="closeLose()">
+            <img src="img/lose.png" alt="lose">
+            <button>Close</button>
+
+        </div>
+        <div class="popup-draw" onclick="closeDraw()">
+            <img src="img/draw.png" alt="draw">
+            <button>Close</button>
+
+        </div>
+    </div> -->
+
     <script src="game.js"></script>
 </body>
+
 </html>
